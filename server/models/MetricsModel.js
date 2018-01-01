@@ -54,11 +54,11 @@
                     person: '59ed027eeb16171314fd00ca'
                 });
                 Metrics.create({
-                    dia: 146,
-                    sys: 88,
+                    dia: 88,
+                    sys: 146,
                     pulse: 83,
                     weight: 46.7,
-                    date: '2017-11-24',
+                    date: '2017-12-31',
                     person: '59ed027eeb16171314fd00ca'
                 });
                 //Aaron
@@ -85,9 +85,9 @@
                     person: '59ea44bd6864283f0023cf1e'
                 });
                 Metrics.create({
-                    dia: 80,
-                    sys: 128,
-                    pulse: 69,
+                    dia: 72,
+                    sys: 127,
+                    pulse: 73,
                     weight: 81.1,
                     date: '2017-12-31',
                     person: '59ea44bd6864283f0023cf1e'
@@ -121,6 +121,13 @@
                     date: '2017-11-24',
                     person: '59ea44bd6864283f0023cf20'
                 });
+                Metrics.create({
+                    dia: 68,
+                    sys: 115,
+                    pulse: 79,
+                    date: '2017-12-31',
+                    person: '59ea44bd6864283f0023cf20'
+                });
                 //Ariel
                 Metrics.create({
                     dia: 60,
@@ -133,6 +140,7 @@
                     dia: 56,
                     sys: 90,
                     pulse: 90,
+                    weight: 29.6,
                     date: '2017-11-25',
                     person: '59ea44bd6864283f0023cf21'
                 });

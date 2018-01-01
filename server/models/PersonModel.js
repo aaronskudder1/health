@@ -29,7 +29,7 @@
                     name: 'Lan',
                     DOB: '1967-05-22',
                     gender: 'female',
-                    height: 1.41,
+                    height: 141,
                     initialWeight: 46.7,
                     photo: 'lan.jpg'
                 });
@@ -38,7 +38,7 @@
                     name: 'Maia',
                     DOB: '2001-09-18',
                     gender: 'female',
-                    height: 1.515,
+                    height: 151,
                     initialWeight: 54.2,
                     photo: 'maia.jpg'
                 });
@@ -47,7 +47,7 @@
                     name: 'Aaron',
                     DOB: '1967-09-24',
                     gender: 'male',
-                    height: 1.65,
+                    height: 165,
                     initialWeight: 81.1,
                     photo: 'aaron.jpg'
                 });
@@ -56,7 +56,7 @@
                     name: 'Ariel',
                     DOB: '2008-02-19',
                     gender: 'male',
-                    height: 1.31,
+                    height: 131,
                     initialWeight: 29.6,
                     photo: 'ariel.jpg'
                 });

@@ -10,6 +10,7 @@
                 .col-md-4
                     p DOB: {{person.DOB | date }}
                     p AGE: {{age}}
+                    p Gender: {{gender}}
                     p Height: {{person.height}} m
                     p Initial Weight: {{person.initialWeight}} kg
             .form-group
@@ -31,6 +32,10 @@
                     label.col-md-2.control-label Name
                     .col-md-3
                         input(ng-model="person.name" required)
+                .row
+                    label.col-md-2.control-label Gender
+                    .col-md-3
+                        input(ng-model="person.gender" required)
                 .row
                     label.col-md-2.control-label DOB
                     .col-md-3

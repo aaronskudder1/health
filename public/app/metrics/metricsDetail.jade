@@ -9,15 +9,15 @@
                 .col-md-3
                     p Systolic: {{metrics.sys }}
                     p Diasolic: {{metrics.dia }}
-                    p Height: {{metrics.height}}
+                    p Height: {{metrics.person.height}}
                 .col-md-3
                     p Pulse: {{metrics.pulse }}
                     p Date: {{metrics.date | date }}
-                    p Weight: {{metrics.initialWeight}}                    
+                    p Weight: {{metrics.person.initialWeight}}                    
         .well        
             .row
                 .col-md-6
-                    h4 Blood Pressure
+                    h3 Blood Pressure
                     p(ng-show="bpHigh")
                         img(src='/images/bpHigh.jpg')
                     p(ng-show="bpPreHigh")
@@ -27,7 +27,7 @@
                     p(ng-show="bpLow")
                             img(src='/images/bpLow.jpg')
                 .col-md-6        
-                    h4 Heart Rate
+                    h3 Heart Rate
                     p(ng-show="HRAthlete")
                         img(src='/images/HRAthlete.png')
                     p(ng-show="HRExcellent")
@@ -46,16 +46,16 @@
             .well 
               .row
               .checkbox
-                label.col-md-5.control-label(for="checkbox")
+                label.col-md-6.control-label(for="checkbox")
                     input(type="checkbox" ng-model="showBP" name="showBP").form-control
-                    | Show Blood Pressure Chart
+                    h4 Blood Pressure Chart
                     p &nbsp
                     p(ng-show="showBP")
                         img(src='/images/bloodpressure.gif')
                 .col-md-1  
-                label.col-md-5.control-label(for="checkbox")
+                label.col-md-6.control-label(for="checkbox")
                     input(type="checkbox" ng-model="showHR" name="showHR").form-control
-                    | Show Heart Rate Chart
+                    h4 Heart Rate Chart
                     p &nbsp
                     p(ng-show="showHR")
                         img(src='/images/normalHeartRate.jpg')

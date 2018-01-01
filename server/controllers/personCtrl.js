@@ -20,7 +20,14 @@
     };
     //create menu
     exports.createPerson = function (req, res) {
-        var personData = req.body;
+        var personData = ({
+            name: req.body.name,
+            gender: req.body.gender,
+            DOB: req.body.DOB,
+            height: req.body.height,
+            initialWeight: req.body.initialWeight,
+            photo: req.body.photo
+        });
 
         Persons.create(personData, function (err) {
             if (err) {
@@ -28,18 +35,23 @@
                 return res.send({
                     reason: err.toString()
                 });
+            } else {
+                console.log('Person was saved');
+                res.redirect(301, '/');
+
             }
         });
     };
     exports.personUpdate = function (req, res, next) {
 
         var entry = new Persons({
-            '_id': req.params.id,
-            'name': req.body.name,
-            'DOB': req.body.DOB,
-            'height': req.body.height,
-            'initialWeight': req.body.initialWeight,
-            'photo': req.body.photo
+            _id: req.params.id,
+            name: req.body.name,
+            gender: req.body.gender,
+            DOB: req.body.DOB,
+            height: req.body.height,
+            initialWeight: req.body.initialWeight,
+            photo: req.body.photo
         });
         console.log(entry);
         Persons.findByIdAndUpdate(req.params.id, entry, {}, function (err) {

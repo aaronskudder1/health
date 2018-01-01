@@ -21,7 +21,7 @@
 
         app.get('/api/persons', personCtrl.getPerson);
         app.get('/api/persons/:id', personCtrl.getPersonsById);
-        app.post('/api/persons', personCtrl.createPerson);
+        app.post('/api/personAdd', personCtrl.createPerson);
         app.put('/api/personUpdate/:id', personCtrl.personUpdate);
         app.post('/api/personDelete/:id', personCtrl.delete);
 

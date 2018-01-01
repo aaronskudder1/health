@@ -9,6 +9,21 @@
                 .col-md-6
                     input.form-control(name="name", type="text", placeholder="name", ng-model="name", required)           
             .form-group
+                label.col-md-2.control-label Gender
+                .col-md-6
+                    input(name="optradio", type="radio", placeholder="genderFemale", ng-model="female")
+                    | &nbsp Female &nbsp
+                    input(name="optradio", type="radio", placeholder="genderMale", ng-model="male")
+                    | &nbsp Male
+            .form-group
+                label.col-md-2.control-label Height (cm)
+                .col-md-6
+                    input.form-control(name="height", type="number", placeholder="height", ng-model="height")
+            .form-group
+                label.col-md-2.control-label Initial Weight
+                .col-md-6
+                    input.form-control(name="initialWeight", type="number", placeholder="initialWeight", ng-model="initialWeight")
+            .form-group
                 label.col-md-2.control-label Date of Birth
                 .col-md-6
                     input.form-control(name="DOB", type="date", placeholder="DOB", ng-model="DOB")

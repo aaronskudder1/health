@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     /*global angular*/
-    angular.module('app').factory('personResource', function ($resource, $q, personUpdate, personDelete) {
+    angular.module('app').factory('personResource', function ($resource, $q, personUpdate, personAdd, personDelete) {
         return {
             getAge: function (d) {
                 var birthday = +new Date(d),
@@ -20,6 +20,19 @@
                 });
                 return person;
             },
+            
+            personAdd: function (newPersonData) {
+                var newPerson = new personAdd(newPersonData),
+                    dfd = $q.defer();
+
+                newPerson.$save().then(function () {
+                    dfd.resolve();
+                }, function (response) {
+                    dfd.reject(response.data.reason);
+                });
+                return dfd.promise;
+            },
+
             updatePerson: function (newPersonData) {
                 var updates = new personUpdate(newPersonData),
                     dfd = $q.defer();
@@ -40,8 +53,6 @@
                 });
                 return dfd.promise;
             }
-
-
         };
     });
 }());
