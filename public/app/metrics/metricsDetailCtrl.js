@@ -10,13 +10,24 @@
                     $scope.metrics = metrics;
                 }
             });
+            var DOB = $scope.metrics.person.DOB,
+                pulse = $scope.metrics.pulse,
+                d = moment(DOB),
+                age = resource.getAge(d),
+                bloodPressure = resource.bloodPressure($scope.metrics.dia, $scope.metrics.sys),
+                weightHeight = {
+                    weight: $scope.metrics.person.initialWeight,
+                    height: $scope.metrics.person.height
+                };
+            console.log(weightHeight);
+
             $scope.bpHigh = false;
             $scope.bpPreHigh = false;
             $scope.bpNormal = false;
             $scope.bpLow = false;
             $scope.showBP = false;
             $scope.showHR = false;
-            
+
             $scope.HRAthlete = false;
             $scope.HRExcellent = false;
             $scope.HRGood = false;
@@ -24,8 +35,7 @@
             $scope.HRAverage = false;
             $scope.HRBelowAverage = false;
             $scope.HRPoor = false;
-            
-            var bloodPressure = resource.bloodPressure($scope.metrics.dia, $scope.metrics.sys);
+
             $scope.bloodPressure = bloodPressure;
             if (bloodPressure === 'High') {
                 $scope.bpHigh = true;
@@ -39,12 +49,6 @@
             if (bloodPressure === 'Low') {
                 $scope.bpLow = true;
             }
-            
-
-            var DOB = $scope.metrics.person.DOB,
-                pulse = $scope.metrics.pulse,
-                d = moment(DOB),
-                age = resource.getAge(d);
 
             $scope.age = age;
             if (age > 65) {
@@ -70,7 +74,7 @@
                 $scope.pulseLevelMessage = "Pluse Level is not an accurate indication of Health under the age of 18";
             }
             // Heart Rate
-          //  $scope.bloodPressure = bloodPressure;
+            //  $scope.bloodPressure = bloodPressure;
             if ($scope.pulseLevel === 'Poor') {
                 $scope.HRPoor = true;
             }
@@ -89,6 +93,9 @@
             if ($scope.pulseLevel === 'Athlete') {
                 $scope.HRAthlete = true;
             }
+
+            $scope.bmi = resource.bmi(weightHeight);
+            console.log('bmi');
         });
     });
 }());

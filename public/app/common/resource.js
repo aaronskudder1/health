@@ -200,6 +200,11 @@
                     }
                 }
                 return result;
+            },
+            bmi : function (weightHeight) {
+                var heightSquared = weightHeight.height * weightHeight.height,
+                    bmi = weightHeight.weight / (heightSquared);
+                return bmi;
             }
 
         };

@@ -26,7 +26,7 @@
             var newPersonData = {
                 person: $scope.person.name,
                 DOB: $scope.person.DOB,
-                gender: $scope.gender,
+                gender: $scope.person.gender,
                 height: $scope.person.height,
                 initialWeight: $scope.person.initialWeight,
                 photo: $scope.person.photo
