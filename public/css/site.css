@@ -1,0 +1,58 @@
+body {
+  padding-top: 69px;
+}
+.navbar-header a.navbar-brand {
+  margin-top: -15px;
+  margin-bottom: -20px;
+}
+.navbar-header a.navbar-brand h6 {
+  color: #ccc;
+}
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+footer p {
+  border-top: 1px solid #d7e0e2;
+}
+.navbar-form .form-group {
+  margin-left: 10px;
+}
+.navbar-form button {
+  margin-left: 10px;
+}
+.top-padding-med {
+  padding-top: 10px;
+}
+.margin-left-med {
+  margin-left: 10px;
+}
+.toast-top-right {
+  top: 70px;
+}
+.toast-success {
+  background-color: #13987e;
+}
+.panel.panel-primary .form-group {
+  margin-left: 10px;
+}
+.form-horizontal .control-label {
+  text-align: left;
+  margin-left: 5px;
+}
+.patient-follow-button {
+  margin-bottom: 3px;
+}
+.btn-primary {
+  margin-right: 10px;
+}
+.checkbox .cr {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #a9a9a9;
+  border-radius: 0.25em;
+  width: 1.3em;
+  height: 1.3em;
+  float: left;
+  margin-right: 0.5em;
+}

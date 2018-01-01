@@ -1,0 +1,29 @@
+.container.top-padding-med
+  .pull-right
+    form.form-inline
+      .form-group.margin-left-med
+        select.form-control(ng-model="sortOrder", ng-options="item.value as item.text for item in sortOptions")
+  .row
+      a.btn.btn-primary(href="/addMetrics") Add Metrics
+  .row
+    .col-md-12
+      div &nbsp;
+  .row
+      .col-md-3  
+        img(src='/images/{{person.photo }}')
+      .col-md-3 
+        h3 {{person.name}}    
+      table.table.table-hover.table-striped.table-condensed
+        thead
+          tr
+            th Date
+            th Diastolic
+            th Systolic
+            th Pulse
+        tbody
+          tr(ng-repeat="metric in metrics | filter: person.name | orderBy: sortOrder ")
+            td
+                a(href="/metricsDetail/{{metric._id}}") {{metric.date | date}}
+            td {{metric.dia}}
+            td {{ metric.sys }}
+            td {{metric.pulse}}

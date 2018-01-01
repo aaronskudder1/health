@@ -1,0 +1,29 @@
+.container
+  .well
+    form.form-horizontal(name="metricsDetails")
+        fieldset
+            legend {{metrics.metricsTag}}
+            .row
+                .form-group
+                    label.col-md-2.control-label(for="person") person
+                    .col-md-3
+                       p.control-label.text-align-left {{metrics.person}}
+            .row
+                .form-group
+                    label.col-md-2.control-label(for="dia") dia
+                    .col-md-3
+                       p.control-label {{metrics.sys}}
+                    label.col-md-2.control-label(for="sys") sys
+                    .col-md-2
+                       p.control-label {{metrics.sys }}
+            .row
+                .form-group
+                    label.col-md-2.control-label(for="pulse") pulse
+                    .col-md-3
+                       p.control-label {{metrics.pulse}}
+           .form-group
+                col-md-10.col-md-offset-2
+                    .pull-right
+                        button.btn.btn-primary(href="/edit/{{metrics._id}}") Edit
+                        | &nbsp;
+                        a.btn.btn-default(href="/") Home

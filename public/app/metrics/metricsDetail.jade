@@ -1,0 +1,62 @@
+.container
+  .well {{metrics.person.name}}
+            .row
+                .col-md-2
+                    img(src='/images/{{metrics.person.photo }}')
+                .col-md-3
+                    p DOB: {{metrics.person.DOB | date }}
+                    p AGE: {{age}}
+                .col-md-3
+                    p Systolic: {{metrics.sys }}
+                    p Diasolic: {{metrics.dia }}
+                    p Height: {{metrics.height}}
+                .col-md-3
+                    p Pulse: {{metrics.pulse }}
+                    p Date: {{metrics.date | date }}
+                    p Weight: {{metrics.initialWeight}}                    
+        .well        
+            .row
+                .col-md-6
+                    h4 Blood Pressure
+                    p(ng-show="bpHigh")
+                        img(src='/images/bpHigh.jpg')
+                    p(ng-show="bpPreHigh")
+                            img(src='/images/bpPreHigh.jpg')
+                    p(ng-show="bpNormal")
+                            img(src='/images/bpNormal.jpg')
+                    p(ng-show="bpLow")
+                            img(src='/images/bpLow.jpg')
+                .col-md-6        
+                    h4 Heart Rate
+                    p(ng-show="HRAthlete")
+                        img(src='/images/HRAthlete.png')
+                    p(ng-show="HRExcellent")
+                        img(src='/images/HRExcellent.png')
+                    p(ng-show="HRGood")
+                        img(src='/images/HRGood.png')
+                    p(ng-show="HRAboveAverage")
+                        img(src='/images/HRAboveAverage.png')
+                    p(ng-show="HRAverage")
+                        img(src='/images/HRAverage.png')
+                    p(ng-show="HRBelowAverage")
+                        img(src='/images/HRBelowAverage.png')
+                    p(ng-show="HRPoor")
+                        img(src='/images/HRPoor.png')
+                    h5 {{ pulseLevelMessage }}
+            .well 
+              .row
+              .checkbox
+                label.col-md-5.control-label(for="checkbox")
+                    input(type="checkbox" ng-model="showBP" name="showBP").form-control
+                    | Show Blood Pressure Chart
+                    p &nbsp
+                    p(ng-show="showBP")
+                        img(src='/images/bloodpressure.gif')
+                .col-md-1  
+                label.col-md-5.control-label(for="checkbox")
+                    input(type="checkbox" ng-model="showHR" name="showHR").form-control
+                    | Show Heart Rate Chart
+                    p &nbsp
+                    p(ng-show="showHR")
+                        img(src='/images/normalHeartRate.jpg')
+                

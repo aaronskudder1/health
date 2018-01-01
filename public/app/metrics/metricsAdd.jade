@@ -1,0 +1,34 @@
+.container
+    form.form-horizontal(name="metricsAdd")
+        fieldset
+            legend Add Metrics 
+                .form-group
+                    label.col-md-2.control-label Person*
+                    .col-md-6
+                        select#propertyType.select.form-control(name="_id", type="text", value="_id" ng-model="_id", ng-options="person._id as person.name for person in persons") 
+                .form-group
+                    label.col-md-2.control-label Sys
+                    .col-md-6
+                        input.form-control(name="sys", type="text", placeholder="sys", ng-model="sys")
+                .form-group
+                    label.col-md-2.control-label Dia
+                    .col-md-6
+                        input.form-control(name="dia", type="text", placeholder="dia", ng-model="dia")
+                .form-group
+                    label.col-md-2.control-label Pulse
+                    .col-md-6
+                        input.form-control(name="pulse", type="text", placeholder="pulse", ng-model="pulse")
+                .form-group
+                    label.col-md-2.control-label Weight
+                    .col-md-6
+                        input.form-control(name="weight", type="text", placeholder="weight", ng-model="weight")
+                .form-group
+                    label.col-md-2.control-label Date
+                    .col-md-6
+                        input.form-control(name="date", type="date", placeholder="date", ng-model="date")
+                .form-group
+                    col-md-10.col-md-offset-2
+                        .pull-right
+                            button.btn.btn-primary(ng-click="submit()", ng-disabled="metricsAdd.$invalid") Submit
+                            | &nbsp;
+                            a.btn.btn-default(href="/") Cancel

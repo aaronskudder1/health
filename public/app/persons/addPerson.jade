@@ -1,0 +1,24 @@
+.container
+    .well
+        form.form-horizontal(name="createForm")
+            fieldset
+                legend Add Person by entering details and click Submit.  Please fill complete all options
+
+            .form-group
+                label.col-md-2.control-label Name*
+                .col-md-6
+                    input.form-control(name="name", type="text", placeholder="name", ng-model="name", required)           
+            .form-group
+                label.col-md-2.control-label Date of Birth
+                .col-md-6
+                    input.form-control(name="DOB", type="date", placeholder="DOB", ng-model="DOB")
+            .form-group
+                label.col-md-2.control-label Photo
+                .col-md-6
+                    input.form-control(name="photo", type="text", placeholder="photo", ng-model="photo")
+            .form-group
+                .col-md-10.col-md-offset-2
+                    .pull-right
+                        button.btn.btn-primary(ng-click="submit()", ng-disabled="createForm.$invalid") Submit
+                        | &nbsp;
+                        a.btn.btn-default(href="/") Cancel

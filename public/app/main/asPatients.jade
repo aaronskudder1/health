@@ -1,0 +1,6 @@
+h3 Patients
+    hr
+    div.row(ng-repeat="patient in patients")
+        div.col-md-2 {{patient.name}}
+        div.col-md-2
+            as-follow-patient(patient-to-follow="patient.name")

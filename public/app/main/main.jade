@@ -1,0 +1,32 @@
+.container
+    .jumbotron
+        h1 Health Database
+    .row
+        .col-md-8
+            .panel.panel-primary
+              .panel-heading.text-center Patients
+              .panel-body
+                .well
+                    a.btn.btn-primary(href="/addMetrics") Add Metrics
+                    a.btn.btn-primary(href="/addPerson") Add Patient
+                    .col-md-12
+                        div &nbsp;
+               table.table.table-hover.table-striped.table-condensed
+                thead
+                  tr
+                    th .
+                    th Name
+                    th DOB
+                tbody
+                  tr(ng-repeat="patient in patients | orderBy: 'name'")
+                    td
+                        img(src='images/{{ patient.photo }}')
+                    td
+                      a(href="/main/{{patient._id}}") {{patient.name}}
+                    td DOB {{patient.DOB | date}}
+        .col-md-4
+            .panel.panel-primary
+              .panel-heading.text-center Follow Patients 
+              .panel-body
+                    div.container
+                        as-patients
