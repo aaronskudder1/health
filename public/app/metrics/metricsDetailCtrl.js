@@ -27,6 +27,7 @@
             $scope.bpLow = false;
             $scope.showBP = false;
             $scope.showHR = false;
+            $scope.showBMI = false;
 
             $scope.HRAthlete = false;
             $scope.HRExcellent = false;
@@ -85,6 +86,9 @@
                 $scope.HRAverage = true;
             }
             if ($scope.pulseLevel === 'AboveAverage') {
+                $scope.HRAboveAverage = true;
+            }
+            if ($scope.pulseLevel === 'Good') {
                 $scope.HRAboveAverage = true;
             }
             if ($scope.pulseLevel === 'Excellent') {

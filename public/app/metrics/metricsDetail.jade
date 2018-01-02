@@ -10,11 +10,11 @@
                 .col-md-3
                     p Systolic: {{metrics.sys }}
                     p Diasolic: {{metrics.dia }}
-                    p Height: {{metrics.person.height}}
+                    p Height: {{metrics.person.height}} (M)
                 .col-md-3
                     p Pulse: {{metrics.pulse }}
                     p Date: {{metrics.date | date }}
-                    p Weight: {{metrics.person.initialWeight}}
+                    p Weight: {{metrics.person.initialWeight}} (kg)
                     p BMI: {{bmi}}
     .well        
         .row
@@ -48,16 +48,23 @@
         .well 
           .row
           .checkbox
-            label.col-md-6.control-label(for="checkbox")
+            .col-md-4
                 input(type="checkbox" ng-model="showBP" name="showBP").form-control
-                h4 Blood Pressure Chart
-                p &nbsp
+                p Blood
+                p Pressure Chart
                 p(ng-show="showBP")
-                    img(src='/images/bloodpressure.gif')
-            .col-md-1  
-            label.col-md-6.control-label(for="checkbox")
+                    img(src='/images/bloodpressure.jpg')
+            .col-md-5
                 input(type="checkbox" ng-model="showHR" name="showHR").form-control
-                h4 Heart Rate Chart
+                p Heart
+                p Rate Chart
                 p &nbsp
                 p(ng-show="showHR")
                     img(src='/images/normalHeartRate.jpg')
+            .col-md-3
+                input(type="checkbox" ng-model="showBMI" name="showBMI").form-control
+                p BMI
+                p Chart
+                p &nbsp
+                p(ng-show="showBMI")
+                    img(src='/images/bmiMales.jpg')

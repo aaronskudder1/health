@@ -167,10 +167,10 @@
                 if (pulse >= 74 && pulse <= 79) {
                     result = "BelowAverage";
                 }
-                if (pulse >= 70 && pulse <= 73) {
+                if (pulse >= 71 && pulse <= 73) {
                     result = "Average";
                 }
-                if (pulse >= 66 && pulse <= 69) {
+                if (pulse >= 66 && pulse <= 70) {
                     result = "AboveAverage";
                 }
                 if (pulse >= 62 && pulse <= 65) {
@@ -204,7 +204,7 @@
             bmi : function (weightHeight) {
                 var heightSquared = weightHeight.height * weightHeight.height,
                     bmi = weightHeight.weight / (heightSquared);
-                return bmi;
+                return Math.trunc(bmi);
             }
 
         };
