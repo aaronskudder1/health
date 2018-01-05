@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     /*global angular*/
-    angular.module('app').factory('auth', function ($http, identity, $q, User) {
+    angular.module('app').factory('auth', function ($http, identity, $q, User, createUser) {
         return {
             authenticateUser: function (username, password) {
                 var dfd = $q.defer();
@@ -22,7 +22,7 @@
             },
 
             createUser: function (newUserData) {
-                var newUser = new User(newUserData),
+                var newUser = new createUser(newUserData),
                     dfd = $q.defer();
 
                 newUser.$save().then(function () {
