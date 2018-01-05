@@ -37,7 +37,7 @@
             .when('/profile', {
                 templateUrl: '/partials/account/profile',
                 controller: 'profileCtrl',
-                resolve: routeRoleChecks.user
+             //   resolve: routeRoleChecks.user
             })
             .when('/main/:id', {
                 templateUrl: '/partials/metrics/personMetrics',
