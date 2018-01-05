@@ -14,11 +14,21 @@
                 pulse = $scope.metrics.pulse,
                 d = moment(DOB),
                 age = resource.getAge(d),
-                bloodPressure = resource.bloodPressure($scope.metrics.dia, $scope.metrics.sys),
-                weightHeight = {
-                    weight: $scope.metrics.person.initialWeight,
-                    height: $scope.metrics.person.height
-                };
+                bmi = 0,
+                weightHeight = 0,
+                bloodPressure = resource.bloodPressure($scope.metrics.dia, $scope.metrics.sys);
+            
+                if ($scope.metrics.weight >= 1) {
+                    weightHeight = {
+                        weight: $scope.metrics.weight,
+                        height: $scope.metrics.person.height
+                        };
+                } else {
+                    weightHeight = {
+                        weight: $scope.metrics.person.initialWeight,
+                        height: $scope.metrics.person.height
+                        };
+                }
             console.log(weightHeight);
 
             $scope.bpHigh = false;
@@ -50,56 +60,36 @@
             if (bloodPressure === 'Low') {
                 $scope.bpLow = true;
             }
-
+            //PULSE (heart rate)
             $scope.age = age;
             if (age > 65) {
-                $scope.pulseLevel = resource.pulseLevel65plus(pulse);
+                $scope.HRImage = resource.pulseLevel65plus(pulse);
             }
             if (age >= 56 && age <= 65) {
-                $scope.pulseLevel = resource.pulseLevel56to65(pulse);
+                $scope.HRImage = resource.pulseLevel56to65(pulse);
             }
             if (age >= 46 && age <= 55) {
-                $scope.pulseLevel = resource.pulseLevel46to55(pulse);
+                $scope.HRImage = resource.pulseLevel46to55(pulse);
             }
             if (age >= 36 && age <= 45) {
-                $scope.pulseLevel = resource.pulseLevel36to45(pulse);
+                $scope.HRImage = resource.pulseLevel36to45(pulse);
             }
             if (age >= 26 && age <= 35) {
-                $scope.pulseLevel = resource.pulseLevel26to35(pulse);
+                $scope.HRImage = resource.pulseLevel26to35(pulse);
             }
             if (age >= 18 && age <= 25) {
-                $scope.pulseLevel = resource.pulseLevel26to35(pulse);
+                $scope.HRImage = resource.pulseLevel26to35(pulse);
             }
             if (age < 18) {
-                $scope.pulseLevel = resource.pulseLevelLessThan18(pulse);
+                $scope.HRImage = resource.pulseLevelLessThan18(pulse);
                 $scope.pulseLevelMessage = "Pluse Level is not an accurate indication of Health under the age of 18";
             }
-            // Heart Rate
-            //  $scope.bloodPressure = bloodPressure;
-            if ($scope.pulseLevel === 'Poor') {
-                $scope.HRPoor = true;
-            }
-            if ($scope.pulseLevel === 'BelowAverage') {
-                $scope.HRBelowAverage = true;
-            }
-            if ($scope.pulseLevel === 'Average') {
-                $scope.HRAverage = true;
-            }
-            if ($scope.pulseLevel === 'AboveAverage') {
-                $scope.HRAboveAverage = true;
-            }
-            if ($scope.pulseLevel === 'Good') {
-                $scope.HRAboveAverage = true;
-            }
-            if ($scope.pulseLevel === 'Excellent') {
-                $scope.HRExcellent = true;
-            }
-            if ($scope.pulseLevel === 'Athlete') {
-                $scope.HRAthlete = true;
-            }
 
-            $scope.bmi = resource.bmi(weightHeight);
+            bmi = resource.bmi(weightHeight);
+            $scope.bmi = bmi;
             console.log('bmi');
+            $scope.bmiImage = resource.getBMIImage(bmi);
+
         });
     });
 }());

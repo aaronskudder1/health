@@ -13,7 +13,7 @@
             type: String,
             required: '{PATH} is required!'
         },
-        userName: {
+        username: {
             type: String,
             required: '{PATH} is required!',
             unique: true
@@ -37,19 +37,18 @@
             return this.roles.indexOf(role) > -1;
         }
     };
-    
     var User = mongoose.model('User', userSchema);
 
     function createDefaultUsers() {
         User.find({}).exec(function (err, collection) {
-            if (collection.length === 2) {
+            if (collection.length === 0) {
                 var salt, hash;
                 salt = encrypt.createSalt();
                 hash = encrypt.hashPwd(salt, 'aaron');
                 User.create({
                     firstName: 'Aaron',
                     lastName: 'Skudder',
-                    userName: 'aaron',
+                    username: 'aaron@aaron.com',
                     salt: salt,
                     hashed_pwd: hash,
                     roles: ['admin']
@@ -59,7 +58,7 @@
                 User.create({
                     firstName: 'Lan',
                     lastName: 'Skudder',
-                    userName: 'lan@lan.com',
+                    username: 'lan@lan.com',
                     salt: salt,
                     hashed_pwd: hash,
                     roles: ['admin']

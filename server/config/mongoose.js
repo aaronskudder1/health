@@ -3,8 +3,8 @@
     /*global module, db, console, require*/
     var mongoose = require('mongoose'),
         MetricsModel = require('../models/MetricsModel'),
-        userModel = require('../models/UserModel'),
-        staffModel = require('../models/StaffModel'),
+        UserModel = require('../models/UserModel'),
+        StaffModel = require('../models/StaffModel'),
         PersonModel = require('../models/PersonModel');
 
     module.exports = function (config) {
@@ -17,7 +17,7 @@
 
         MetricsModel.createDefaultMetrics();
         PersonModel.createDefaultPersons();
-        userModel.createDefaultUsers();
-        staffModel.createDefaultStaff();
+        UserModel.createDefaultUsers();
+        StaffModel.createDefaultStaff();
     };
 }());

@@ -11,25 +11,25 @@
             pulseLevelLessThan18: function (pulse) {
                 var result;
                 if (pulse > 82) {
-                    result = "Poor";
+                    result = "HRPoor.png";
                 }
                 if (pulse >= 74 && pulse <= 81) {
-                    result = "BelowAverage";
+                    result = "HRBelowAverage.png";
                 }
                 if (pulse >= 70 && pulse <= 73) {
-                    result = "Average";
+                    result = "HRAverage.png";
                 }
                 if (pulse >= 66 && pulse <= 69) {
-                    result = "AboveAverage";
+                    result = "HRAboveAverage.png";
                 }
                 if (pulse >= 62 && pulse <= 65) {
-                    result = "Good";
+                    result = "HRGood.png";
                 }
                 if (pulse >= 56 && pulse <= 61) {
-                    result = "Excellent";
+                    result = "HRExcellent.png";
                 }
                 if (pulse >= 49 && pulse <= 55) {
-                    result = "Athlete";
+                    result = "HRAthlete.png";
                 }
                 return result;
             },
@@ -37,150 +37,150 @@
             pulseLevel18to25: function (pulse) {
                 var result;
                 if (pulse > 82) {
-                    result = "Poor";
+                    result = "HRPoor.png";
                 }
                 if (pulse >= 74 && pulse <= 81) {
-                    result = "BelowAverage";
+                    result = "HRBelowAverage.png";
                 }
                 if (pulse >= 70 && pulse <= 73) {
-                    result = "Average";
+                    result = "HRAverage.png";
                 }
                 if (pulse >= 66 && pulse <= 69) {
-                    result = "AboveAverage";
+                    result = "HRAboveAverage.png";
                 }
                 if (pulse >= 62 && pulse <= 65) {
-                    result = "Good";
+                    result = "HRGood.png";
                 }
                 if (pulse >= 56 && pulse <= 61) {
-                    result = "Excellent";
+                    result = "HRExcellent.png";
                 }
                 if (pulse >= 49 && pulse <= 55) {
-                    result = "Athlete";
+                    result = "HRAthlete.png";
                 }
                 return result;
             },
             pulseLevel26to35: function (pulse) {
                 var result;
                 if (pulse > 82) {
-                    result = "Poor";
+                    result = "HRPoor.png";
                 }
                 if (pulse >= 75 && pulse <= 81) {
-                    result = "BelowAverage";
+                    result = "HRBelowAverage.png";
                 }
                 if (pulse >= 71 && pulse <= 74) {
-                    result = "Average";
+                    result = "HRAverage.png";
                 }
                 if (pulse >= 60 && pulse <= 70) {
-                    result = "AboveAverage";
+                    result = "HRAboveAverage.png";
                 }
                 if (pulse >= 62 && pulse <= 65) {
-                    result = "Good";
+                    result = "HRGood.png";
                 }
                 if (pulse >= 55 && pulse <= 61) {
-                    result = "Excellent";
+                    result = "HRExcellent.png";
                 }
                 if (pulse >= 49 && pulse <= 54) {
-                    result = "Athlete";
+                    result = "HRAthlete.png";
                 }
                 return result;
             },
             pulseLevel36to45: function (pulse) {
                 var result;
                 if (pulse > 83) {
-                    result = "Poor";
+                    result = "HRPoor.png";
                 }
                 if (pulse >= 76 && pulse <= 82) {
-                    result = "BelowAverage";
+                    result = "HRBelowAverage.png";
                 }
                 if (pulse >= 71 && pulse <= 75) {
-                    result = "Average";
+                    result = "HRAverage.png";
                 }
                 if (pulse >= 67 && pulse <= 70) {
-                    result = "AboveAverage";
+                    result = "HRAboveAverage.png";
                 }
                 if (pulse >= 63 && pulse <= 66) {
-                    result = "Good";
+                    result = "HRGood.png";
                 }
                 if (pulse >= 57 && pulse <= 62) {
-                    result = "Excellent";
+                    result = "HRExcellent.png";
                 }
                 if (pulse >= 50 && pulse <= 56) {
-                    result = "Athlete";
+                    result = "HRAthlete.png";
                 }
                 return result;
             },
             pulseLevel46to55: function (pulse) {
                 var result;
                 if (pulse > 84) {
-                    result = "Poor";
+                    result = "HRPoor.png";
                 }
                 if (pulse >= 77 && pulse <= 83) {
-                    result = "BelowAverage";
+                    result = "HRBelowAverage.png";
                 }
                 if (pulse >= 72 && pulse <= 76) {
-                    result = "Average";
+                    result = "HRAverage.png";
                 }
                 if (pulse >= 68 && pulse <= 71) {
-                    result = "AboveAverage";
+                    result = "HRAboveAverage.png";
                 }
                 if (pulse >= 64 && pulse <= 67) {
-                    result = "Good";
+                    result = "HRGood.png";
                 }
                 if (pulse >= 58 && pulse <= 63) {
-                    result = "Excellent";
+                    result = "HRExcellent.png";
                 }
                 if (pulse >= 50 && pulse <= 57) {
-                    result = "Athlete";
+                    result = "HRAthlete.png";
                 }
                 return result;
             },
             pulseLevel56to65: function (pulse) {
                 var result;
                 if (pulse > 82) {
-                    result = "Poor";
+                    result = "HRPoor.png";
                 }
                 if (pulse >= 76 && pulse <= 81) {
-                    result = "BelowAverage";
+                    result = "HRBelowAverage.png";
                 }
                 if (pulse >= 72 && pulse <= 75) {
-                    result = "Average";
+                    result = "HRAverage.png";
                 }
                 if (pulse >= 68 && pulse <= 71) {
-                    result = "AboveAverage";
+                    result = "HRAboveAverage.png";
                 }
                 if (pulse >= 62 && pulse <= 67) {
-                    result = "Good";
+                    result = "HRGood.png";
                 }
                 if (pulse >= 57 && pulse <= 61) {
-                    result = "Excellent";
+                    result = "HRExcellent.png";
                 }
                 if (pulse >= 51 && pulse <= 56) {
-                    result = "Athlete";
+                    result = "HRAthlete.png";
                 }
                 return result;
             },
             pulseLevel65plus: function (pulse) {
                 var result;
                 if (pulse > 80) {
-                    result = "Poor";
+                    result = "HRPoor.png";
                 }
                 if (pulse >= 74 && pulse <= 79) {
-                    result = "BelowAverage";
+                    result = "HRBelowAverage.png";
                 }
                 if (pulse >= 71 && pulse <= 73) {
-                    result = "Average";
+                    result = "HRAverage.png";
                 }
                 if (pulse >= 66 && pulse <= 70) {
-                    result = "AboveAverage";
+                    result = "HRAboveAverage.png";
                 }
                 if (pulse >= 62 && pulse <= 65) {
-                    result = "Good";
+                    result = "HRGood.png";
                 }
                 if (pulse >= 56 && pulse <= 61) {
-                    result = "Excellent";
+                    result = "HRExcellent.png";
                 }
                 if (pulse >= 50 && pulse <= 55) {
-                    result = "Athlete";
+                    result = "HRAthlete.png";
                 }
                 return result;
             },
@@ -201,10 +201,33 @@
                 }
                 return result;
             },
+            
             bmi : function (weightHeight) {
                 var heightSquared = weightHeight.height * weightHeight.height,
                     bmi = weightHeight.weight / (heightSquared);
                 return Math.trunc(bmi);
+            },
+            getBMIImage: function (bmi) {
+                var result;
+                if (bmi < 18.5) {
+                    result = "underWeight.jpg";
+                }
+                if (bmi >= 18.5 && bmi <= 24.9) {
+                    result = "normalWeight.jpg";
+                }
+                if (bmi >= 25 && bmi <= 29.9) {
+                    result = "overWeight.jpg";
+                }
+                if (bmi >= 30 && bmi <= 34.9) {
+                    result = "obeseClass1.jpg";
+                }
+                if (bmi >= 35 && bmi <= 39.9) {
+                    result = "obeseClass2.jpg";
+                }
+                if (bmi >= 40) {
+                    result = "obeseClass3.jpg";
+                }
+                return result;
             }
 
         };

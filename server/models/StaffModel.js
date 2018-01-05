@@ -7,7 +7,7 @@
         staffSchema = mongoose.Schema({
             firstName: String,
             lastName: Date,
-            userName: String
+            username: String
         });
 
     var Staff = mongoose.model('Staff', staffSchema);
@@ -20,7 +20,7 @@
                 Staff.create({
                     firstName: 'aaron',
                     lastName: 'skudder',
-                    userName: 'aaron@aaron.com'
+                    username: 'aaron@aaron.com'
                 });
             }
 

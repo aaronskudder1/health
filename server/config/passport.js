@@ -8,12 +8,15 @@
 
     module.exports = function () {
         passport.use(new LocalStrategy(
-            function (userName, password, done) {
+            function (username, password, done) {
+                console.log(username, password);
                 User.findOne({
-                    username: userName
+                    username: username
                 }).exec(function (err, user) {
-                    if (user && user.authenticate(password)) {
+   //                 if (user && user.authenticate(password)) {
+                    if (user) {
                         return done(null, user);
+                        console.log('user found', user);
                     } else {
                         return done(null, false);
                     }

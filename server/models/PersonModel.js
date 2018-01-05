@@ -88,6 +88,15 @@
                     gender: 'male',
                     photo: 'dante.jpg'
                 });
+                Persons.create({
+                    _id: '5a4b083aeee5693050f890d5',
+                    name: 'Kevin',
+                    DOB: '2001-09-03',
+                    gender: 'male',
+                    height: 1.59,
+                    initialWeight: 57.6,
+                    photo: 'kevin.jpg'
+                });
                 console.log('default persons created');
             }
         });

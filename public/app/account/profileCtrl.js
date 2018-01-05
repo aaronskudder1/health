@@ -2,13 +2,13 @@
     'use strict';
     /*global angular*/
     angular.module('app').controller('profileCtrl', function ($scope, auth, identity, notifier) {
-        $scope.email = identity.currentUser.userName;
+        $scope.email = identity.currentUser.username;
         $scope.fname = identity.currentUser.firstName;
         $scope.lname = identity.currentUser.lastName;
 
         $scope.update = function () {
             var newUserData = {
-                userName: $scope.email,
+                username: $scope.email,
                 firstName: $scope.fname,
                 lastName: $scope.lname
             };

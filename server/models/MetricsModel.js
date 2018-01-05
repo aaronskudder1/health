@@ -176,6 +176,15 @@
                     date: '2017-11-26',
                     person: '5a1a4d8e8b77bd3ac088d1c2'
                 });
+                //Kevin
+                Metrics.create({
+                    dia: 75,
+                    sys: 116,
+                    pulse: 65,
+                    weight: 57.6,
+                    date: '2018-01-02',
+                    person: '5a4b083aeee5693050f890d5'
+                });
                 console.log('default metrics created');
             }
         });

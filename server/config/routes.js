@@ -6,13 +6,14 @@
         userCtrl = require('../controllers/userCtrl'),
         mainCtrl = require('../controllers/mainCtrl'),
         personCtrl = require('../controllers/personCtrl'),
-        metricsCtrl = require('../controllers/metricsCtrl');
-   //     mongoose = require('mongoose');
-  //      User = mongoose.model('User');
+        metricsCtrl = require('../controllers/metricsCtrl'),
+        mongoose = require('mongoose'),  //?
+        User = mongoose.model('User'); //?
 
     module.exports = function (app) {
-      //  app.get('/api/users', auth.requiresRole('admin'), userCtrl.getUsers);
-        app.get('/api/users', userCtrl.getUsers);
+ //       app.get('/api/users', userCtrl.getUsers);
+        app.get('/api/users', auth.requiresRole('admin'), userCtrl.getUsers);
+        
         app.post('/api/users', userCtrl.createUser);
         app.put('/api/users', userCtrl.updateUser);
 

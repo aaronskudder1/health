@@ -5,7 +5,7 @@
 
         $scope.signup = function () {
             var newUserData = {
-                userName: $scope.email,
+                username: $scope.email,
                 password: $scope.password,
                 firstName: $scope.fname,
                 lastName: $scope.lname

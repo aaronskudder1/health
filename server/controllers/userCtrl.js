@@ -12,7 +12,7 @@
 
     exports.createUser = function (req, res, next) {
         var userData = req.body;
-        userData.userName = userData.userName();
+    //    userData.username = userData.username.toLowerCase();
         userData.salt = encrypt.createSalt();
         //console.log(salt);
         userData.hashed_pwd = encrypt.hashPwd(userData.salt, userData.password);
@@ -46,7 +46,7 @@
         }
         req.user.firstName = userUpdates.firstName;
         req.user.lastName = userUpdates.lastName;
-        req.user.userName = userUpdates.userName;
+        req.user.username = userUpdates.username;
         if (userUpdates.password && userUpdates.password.length > 0) {
             req.user.salt = encrypt.createSalt();
             req.user.hashed_pwd = encrypt.hashPwd(req.user.salt, userUpdates.password);
