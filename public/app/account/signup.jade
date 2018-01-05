@@ -20,6 +20,10 @@
           .col-md-10
             input.form-control(name="lname", type="text", placeholder="Last Name", ng-model="lname", required)
         .form-group
+          label.col-md-2.control-label(for="admin") Lockout
+          .col-md-10
+            input.form-control(name="admin", type="text", placeholder="lockout", ng-model="admin")
+        .form-group
           .col-md-10.col-md-offset-2
             .pull-right
               button.btn.btn-primary(ng-click="signup()", ng-disabled="signupForm.$invalid") Submit

@@ -8,7 +8,8 @@
                 username: $scope.email,
                 password: $scope.password,
                 firstName: $scope.fname,
-                lastName: $scope.lname
+                lastName: $scope.lname,
+                admin: $scope.admin
             };
 
             auth.createUser(newUserData).then(function () {
