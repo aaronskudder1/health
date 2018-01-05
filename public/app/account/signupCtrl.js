@@ -12,7 +12,7 @@
                 admin: $scope.admin
             };
 
-            auth.createUser(newUserData).then(function () {
+            auth.addUser(newUserData).then(function () {
                 notifier.notify('User account created!');
                 $location.path('/');
             }, function (reason) {

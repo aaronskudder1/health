@@ -21,7 +21,7 @@
                 return dfd.promise;
             },
 
-            createUser: function (newUserData) {
+            addUser: function (newUserData) {
                 var newUser = new createUser(newUserData),
                     dfd = $q.defer();
 
