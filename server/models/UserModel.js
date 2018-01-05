@@ -41,7 +41,7 @@
 
     function createDefaultUsers() {
         User.find({}).exec(function (err, collection) {
-            if (collection.length === 2) {
+            if (collection.length >= 1) {
                 var salt, hash;
                 salt = encrypt.createSalt();
                 hash = encrypt.hashPwd(salt, 'aaron');
