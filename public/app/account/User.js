@@ -15,7 +15,7 @@
             return this.roles && this.roles.indexOf('admin') > -1;
         };
 
-//        return UserResource;
+        return UserResource;
     });
 }());
 

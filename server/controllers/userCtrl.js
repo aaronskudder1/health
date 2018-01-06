@@ -31,7 +31,6 @@
                 if (err) {
                     res.send(user);
                     return next(err);
-
                 }
             });
         });
