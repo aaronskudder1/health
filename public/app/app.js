@@ -22,13 +22,13 @@
         $routeProvider
             .when('/', {
                 templateUrl: '/partials/main/main',
-                controller: 'mainCtrl'
-              //  resolve: routeRoleChecks.admin
+                controller: 'mainCtrl',
+                resolve: routeRoleChecks.admin
             })
             .when('/admin/users', {
                 templateUrl: '/partials/admin/user-list',
-                controller: 'userListCtrl'
-           //     resolve: routeRoleChecks.admin
+                controller: 'userListCtrl',
+                resolve: routeRoleChecks.admin
             })
             .when('/signup', {
                 templateUrl: '/partials/account/signup',
@@ -37,7 +37,7 @@
             .when('/profile', {
                 templateUrl: '/partials/account/profile',
                 controller: 'profileCtrl',
-             //   resolve: routeRoleChecks.user
+                resolve: routeRoleChecks.user
             })
             .when('/main/:id', {
                 templateUrl: '/partials/metrics/personMetrics',
