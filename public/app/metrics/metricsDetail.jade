@@ -5,6 +5,7 @@
                 .col-md-2
                     img(src='/images/{{metrics.person.photo }}')
                 .col-md-3
+                    p Date: {{metrics.date | date }}                
                     p DOB: {{metrics.person.DOB | date }}
                     p AGE: {{age}}
                     p Gender: {{metrics.person.gender}}
@@ -12,10 +13,12 @@
                     p Systolic: {{metrics.sys }}
                     p Diasolic: {{metrics.dia }}
                     p Height: {{metrics.person.height}} (M)
-                .col-md-3
                     p Pulse: {{metrics.pulse }}
+                    
+                .col-md-3
                     p Date: {{metrics.date | date }}
-                    p Weight: {{metrics.person.initialWeight}} (kg)
+                    p Initial Weight: {{metrics.person.initialWeight}} Current Reading: {{metrics.weight}} (kg)
+                    P Weight Loss/gain: {{metrics.person.initialWeight - metrics.weight}} kg
                     p BMI: {{bmi}}
     .well        
         .row

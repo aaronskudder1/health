@@ -5,6 +5,7 @@
         MetricsModel = require('../models/MetricsModel'),
         UserModel = require('../models/UserModel'),
         StaffModel = require('../models/StaffModel'),
+        FitnessModel = require('../models/FitnessModel'),
         PersonModel = require('../models/PersonModel');
 
     module.exports = function (config) {
@@ -19,5 +20,6 @@
         PersonModel.createDefaultPersons();
         UserModel.createDefaultUsers();
         StaffModel.createDefaultStaff();
+        FitnessModel.createDefaultFitness();
     };
 }());
