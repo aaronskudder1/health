@@ -47,6 +47,10 @@
                 templateUrl: '/partials/metrics/metricsDetail',
                 controller: 'metricsDetailCtrl'
             })
+            .when('/addMetrics', {
+                templateUrl: '/partials/metrics/metricsAdd',
+                controller: 'metricsAddCtrl'
+            })
             .when('/persons/personDetails/:id', {
                 templateUrl: '/partials/persons/PersonDetails',
                 controller: 'personDetailsCtrl'
@@ -64,9 +68,9 @@
                 templateUrl: '/partials/persons/addPerson',
                 controller: 'addPersonCtrl'
             })
-            .when('/addMetrics', {
-                templateUrl: '/partials/metrics/metricsAdd',
-                controller: 'metricsAddCtrl'
+            .when('/fitness', {
+                templateUrl: '/partials/fitness/fitness',
+                controller: 'fitnessCtrl'
             });
 
 

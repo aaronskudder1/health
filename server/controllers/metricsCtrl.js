@@ -49,7 +49,7 @@
     
     exports.updateMetrics = function (req, res) {};
 
-}()); 
+}());
 
 //       var personData = req.body;
 

@@ -7,6 +7,7 @@
         mainCtrl = require('../controllers/mainCtrl'),
         personCtrl = require('../controllers/personCtrl'),
         metricsCtrl = require('../controllers/metricsCtrl'),
+        fitnessCtrl = require('../controllers/fitnessCtrl'),
         mongoose = require('mongoose'),  //?
         User = mongoose.model('User'); //?
 
@@ -31,6 +32,10 @@
         app.post('/api/create', metricsCtrl.createMetrics);
         app.put('/api/update/:id', metricsCtrl.updateMetrics);
 
+        app.get('/api/fitness', fitnessCtrl.getFitness);
+        app.get('/api/fitness/:id', fitnessCtrl.getFitnessById);
+        
+        
         app.get('/partials/*', function (req, res) {
             res.render('../../public/app/' + req.params[0]);
         });

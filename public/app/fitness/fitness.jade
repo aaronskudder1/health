@@ -1,0 +1,22 @@
+.container
+    .jumbotron
+        h1 Fitness
+    .row
+        .col-md-12
+            .panel.panel-primary
+              .panel-heading.text-center Fitness
+              .panel-body
+                .well
+                   table.table.table-hover.table-striped.table-condensed
+                    thead
+                      tr
+                        th Patient
+                        th Exercise
+                        th Description
+                        th Date
+                    tbody
+                      tr(ng-repeat="fitnes in fitness | orderBy: 'date'")
+                        td {{fitnes.person.name}}
+                        td {{fitnes.exercise}}
+                        td {{fitnes.description}}
+                        td {{fitnes.date | date}}

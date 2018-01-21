@@ -22,7 +22,8 @@
                 //Aaron
                 Fitness.create({
                     exercise: 90,
-                    description: "walking, swimming and walking knee deep in ocean",
+                    description: "Walking, Swimming",
+                    exerciseCategories: ['Walking', 'Swimming'],
                     date: '2018-01-07',
                     person: '59ea44bd6864283f0023cf1e'
                 });
@@ -36,12 +37,42 @@
                     exercise: 60,
                     description: "Swimming, Walking",
                     date: '2018-01-09',
-                    person: '59ea44bd6864283f0023cf1e' 
+                    person: '59ea44bd6864283f0023cf1e'
                 });
                 Fitness.create({
                     exercise: 90,
                     description: "Cycling",
                     date: '2018-01-10',
+                    person: '59ea44bd6864283f0023cf1e'
+                });
+                Fitness.create({
+                    exercise: 50,
+                    description: "Swimming",
+                    date: '2018-01-11',
+                    person: '59ea44bd6864283f0023cf1e'
+                });
+                Fitness.create({
+                    exercise: 50,
+                    description: "Swimming",
+                    date: '2018-01-12',
+                    person: '59ea44bd6864283f0023cf1e'
+                });
+                Fitness.create({
+                    exercise: 90,
+                    description: "Walking",
+                    date: '2018-01-13',
+                    person: '59ea44bd6864283f0023cf1e'
+                });
+                Fitness.create({
+                    exercise: 180,
+                    description: "Swimming, Cycling, Walking",
+                    date: '2018-01-14',
+                    person: '59ea44bd6864283f0023cf1e'
+                });
+                Fitness.create({
+                    exercise: 120,
+                    description: "Cycling",
+                    date: '2018-01-14',
                     person: '59ea44bd6864283f0023cf1e'
                 });
                 //Lan
@@ -51,10 +82,16 @@
                     date: '2018-01-07',
                     person: '59ed027eeb16171314fd00ca'
                 });
-                 Fitness.create({
+                Fitness.create({
                     exercise: 120,
                     description: "Walking",
                     date: '2018-01-08',
+                    person: '59ed027eeb16171314fd00ca'
+                });
+                Fitness.create({
+                    exercise: 35,
+                    description: "Walking",
+                    date: '2018-01-19',
                     person: '59ed027eeb16171314fd00ca'
                 });
                 console.log('default Fitness created');

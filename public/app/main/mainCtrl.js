@@ -2,11 +2,30 @@
     'use strict';
     /*global angular*/
     angular.module('app').value('asFollowedPatients', []);
-    angular.module('app').controller('mainCtrl', function ($scope, persons, asFollowedPatients) {
+    angular.module('app').controller('mainCtrl', function ($scope, persons, metrics, asFollowedPatients) {
         //    $scope.metrics = cachedMetrics.query();
         $scope.patients = persons.query();
 
         $scope.asFollowedPatients = asFollowedPatients;
+        var followedPatientMetric = [];
+
+        asFollowedPatients.forEach(function (element) {
+
+            metrics.query().$promise.then(function (collection) {
+                collection.forEach(function (metric) {
+                    $scope.metric = metric;
+                    console.log(metric);
+                    if (metric.person.name === element) {
+                        $scope.followedPatient = element;
+                        $scope.followedPatientWeight = metric.weight;
+                    }
+                });
+                            followedPatientMetric.push(collection);
+            $scope.followedPatientMetric = followedPatientMetric;
+
+            });
+        });
+
     });
 
     angular.module('app').directive('asPatients', function () {
@@ -26,14 +45,14 @@
                 patientToFollow: '='
             },
             link: function (scope, element, attrs) {
-//unfollowPatient patient-to-follow
+                //unfollowPatient patient-to-follow
                 scope.followed = function () {
                     return asFollowedPatients.indexOf(scope.patientToFollow) > -1;
                 };
                 scope.followPatient = function () {
                     console.log('follow ' + scope.patientToFollow);
                     asFollowedPatients.push(scope.patientToFollow);
-                    console.log(asFollowedPatients);
+                    // console.log(asFollowedPatients);
                 };
                 scope.unfollowPatient = function () {
                     console.log('unfollow' + scope.patientToFollow);

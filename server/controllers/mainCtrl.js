@@ -13,5 +13,3 @@ exports.getMetricsById = function (req, res) {
         res.send(Metrics);
     });
 };
-
-//create menu
