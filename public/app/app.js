@@ -71,9 +71,10 @@
             .when('/fitness', {
                 templateUrl: '/partials/fitness/fitness',
                 controller: 'fitnessCtrl'
+            })
+            .when('/fitnessAdd', {
+                templateUrl: '/partials/fitness/fitnessAdd',
+                controller: 'fitnessAddCtrl'
             });
-
-
     });
-
 }());

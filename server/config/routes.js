@@ -34,7 +34,7 @@
 
         app.get('/api/fitness', fitnessCtrl.getFitness);
         app.get('/api/fitness/:id', fitnessCtrl.getFitnessById);
-        
+        app.post('/api/fitness', fitnessCtrl.createFitness);
         
         app.get('/partials/*', function (req, res) {
             res.render('../../public/app/' + req.params[0]);

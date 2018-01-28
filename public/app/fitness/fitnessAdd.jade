@@ -1,0 +1,27 @@
+.container
+    form.form-horizontal(name="fitnessAdd")
+        fieldset
+            legend Add Metrics 
+                .form-group
+                    label.col-md-2.control-label Person*
+                    .col-md-6
+                        select#propertyType.select.form-control(name="_id", type="text", value="_id" ng-model="_id", ng-options="person._id as person.name for person in persons") 
+                .form-group
+                    label.col-md-2.control-label Date
+                    .col-md-6
+                        input.form-control(name="date", type="date", placeholder="date", ng-model="date")
+                .form-group
+                    label.col-md-2.control-label Exercise
+                    .col-md-6
+                        input.form-control(name="exercise", type="number", placeholder="exercise", ng-model="exercise")
+                .form-group
+                    label.col-md-2.control-label Exercise Categories
+                    .col-md-6
+                        input.form-control(name="exerciseCategories", type="text", placeholder="exerciseCategories", ng-model="exerciseCategories")
+
+                .form-group
+                    col-md-10.col-md-offset-2
+                        .pull-right
+                            button.btn.btn-primary(ng-click="submit()", ng-disabled="fitnessAdd.$invalid") Submit
+                            | &nbsp;
+                            a.btn.btn-default(href="/") Cancel
