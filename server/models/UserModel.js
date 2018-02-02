@@ -41,8 +41,9 @@
 
     function createDefaultUsers() {
         User.find({}).exec(function (err, collection) {
-            if (collection.length === 0) {
-                var salt, hash;
+            if (collection.length === 9) {
+                
+                var salt, hash;/*
                 salt = encrypt.createSalt();
                 hash = encrypt.hashPwd(salt, 'aaron');
                 User.create({
@@ -59,6 +60,16 @@
                     firstName: 'Lan',
                     lastName: 'Skudder',
                     username: 'lan@lan.com',
+                    salt: salt,
+                    hashed_pwd: hash,
+                    roles: ['admin']
+                });*/
+                salt = encrypt.createSalt();
+                hash = encrypt.hashPwd(salt, 'T3mp#123');
+                User.create({
+                    firstName: 'Christopher',
+                    lastName: 'Audain',
+                    username: 'Chris',
                     salt: salt,
                     hashed_pwd: hash,
                     roles: ['admin']

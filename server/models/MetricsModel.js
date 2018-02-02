@@ -69,6 +69,14 @@
                     date: '2018-01-16',
                     person: '59ed027eeb16171314fd00ca'
                 });
+                Metrics.create({
+                    dia: 100,
+                    sys: 159,
+                    pulse: 79,
+                    weight: 46.1,
+                    date: '2018-02-03',
+                    person: '59ed027eeb16171314fd00ca'
+                });
                 //Aaron
                 Metrics.create({
                     dia: 79,
@@ -116,6 +124,14 @@
                     date: '2018-01-15',
                     person: '59ea44bd6864283f0023cf1e'
                 });
+                Metrics.create({
+                    dia: 65,
+                    sys: 114,
+                    pulse: 67,
+                    weight: 79.8,
+                    date: '2018-02-03',
+                    person: '59ea44bd6864283f0023cf1e'
+                });
                 //Maia
                 Metrics.create({
                     dia: 62,
@@ -152,6 +168,13 @@
                     date: '2017-12-31',
                     person: '59ea44bd6864283f0023cf20'
                 });
+                Metrics.create({
+                    dia: 60,
+                    sys: 120,
+                    pulse: 80,
+                    date: '2018-02-03',
+                    person: '59ea44bd6864283f0023cf20'
+                });
                 //Ariel
                 Metrics.create({
                     dia: 60,
@@ -174,6 +197,13 @@
                     sys: 139,
                     pulse: 66,
                     date: '2017-11-26',
+                    person: '5a1a4d8e8b77bd3ac088d1c3'
+                }); 
+                Metrics.create({
+                    dia: 69,
+                    sys: 121,
+                    pulse: 63,
+                    date: '2018-02-03',
                     person: '5a1a4d8e8b77bd3ac088d1c3'
                 });
                 //Helen
