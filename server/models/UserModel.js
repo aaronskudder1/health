@@ -41,9 +41,9 @@
 
     function createDefaultUsers() {
         User.find({}).exec(function (err, collection) {
-            if (collection.length === 2) {
+            if (collection.length === 0) {
                 
-                var salt, hash;/*
+                var salt, hash;
                 salt = encrypt.createSalt();
                 hash = encrypt.hashPwd(salt, 'aaron');
                 User.create({
@@ -53,7 +53,7 @@
                     salt: salt,
                     hashed_pwd: hash,
                     roles: ['admin']
-                });*/
+                });
                 salt = encrypt.createSalt();
                 hash = encrypt.hashPwd(salt, 'lan');
                 User.create({

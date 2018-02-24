@@ -20,6 +20,8 @@
             th Diastolic
             th Systolic
             th Pulse
+            th weight
+            th waist
         tbody
           tr(ng-repeat="metric in metrics | filter: person.name | orderBy: sortOrder ")
             td
@@ -27,3 +29,5 @@
             td {{metric.dia}}
             td {{ metric.sys }}
             td {{metric.pulse}}
+            td {{metric.weight}}
+            td {{metric.waist}}

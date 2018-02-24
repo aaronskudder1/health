@@ -30,6 +30,16 @@
                         };
                 }
             console.log(weightHeight);
+            $scope.maxPulse = getMaxPulse(collection, 0)
+
+            function getMaxPulse(collection, pulse) {
+                var max;
+                for (var i=0 ; i<collection.length ; i++) {
+                    if (!max || parseInt(collection[i].pulse) > parseInt(max[pulse]))
+                        max = collection[i].pulse;
+                }
+                return max;
+            };
 
             $scope.bpHigh = false;
             $scope.bpPreHigh = false;

@@ -14,12 +14,13 @@
                     p Diasolic: {{metrics.dia }}
                     p Height: {{metrics.person.height}} (M)
                     p Pulse: {{metrics.pulse }}
+                    p Highest Pulse: {{maxPulse}}
                     
                 .col-md-3
-                    p Date: {{metrics.date | date }}
-                    p Initial Weight: {{metrics.person.initialWeight}} Current Reading: {{metrics.weight}} (kg)
-                    P Weight Loss/gain: {{metrics.person.initialWeight - metrics.weight}} kg
+                    p Initial Weight: {{metrics.person.initialWeight}} Current: {{metrics.weight}} kg
+                    P Weight Loss: {{metrics.person.initialWeight - metrics.weight  | number : 2}} kg
                     p BMI: {{bmi}}
+                    p Waist: {{metrics.waist}}
     .well        
         .row
             .col-md-4

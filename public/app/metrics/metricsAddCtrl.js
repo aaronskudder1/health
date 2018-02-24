@@ -11,6 +11,7 @@
                 sys: $scope.sys,
                 pulse: $scope.pulse,
                 weight: $scope.weight,
+                waist: $scope.waist,
                 date: $scope.date,
                 person: $scope._id
             };

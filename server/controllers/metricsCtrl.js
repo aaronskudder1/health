@@ -27,6 +27,7 @@
             sys : req.body.sys,
             pulse : req.body.pulse,
             weight : req.body.weight,
+            waist : req.body.waist,
             person : req.body.person,
             date : req.body.date
         });
