@@ -1,0 +1,60 @@
+.container
+    .col-md-12(ng-hide="editMode")
+        .well
+            h3 {{fitness.person.name}}
+        .well
+            .row
+                btn.btn-success
+                .col-md-1
+                    img(src='/images/{{fitness.person.photo }}')
+                .col-md-10
+                    p week {{fitness.week }} {{fitness.weekEnding }}
+                    .row
+                        .col-md-10
+                            p Sun: {{fitness.exerciseOnDay[0] }} Mon: {{fitness.exerciseOnDay[1]}} Tues: {{fitness.exerciseOnDay[2] }} Wed: {{fitness.exerciseOnDay[3]}} Thurs: {{fitness.exerciseOnDay[4]}} Fri: {{fitness.exerciseOnDay[5] }} Sat: {{fitness.exerciseOnDay[6]}}
+                    .row
+                        .col-md-5
+                            p Description: {{fitness.description}}
+            .form-group
+                col-md-10.col-md-offset-2
+                    .pull-right
+                        button.btn.btn-primary(ng-click="edit()") Edit
+                        | &nbsp;
+                        button.btn.btn-primary(ng-click="delete()") Delete
+                        | &nbsp;
+
+                        a.btn.btn-default(href="/") Home
+    .col-md-12(ng-show="editMode")
+        form.form-horizontal(name="personEdit")
+            fieldset
+                legend
+                    p Edit {{person.name}}
+                    p &nbsp
+                .row
+                    label.col-md-2.control-label Week
+                    .col-md-3
+                        input(ng-model="fitness.week" required)
+                .row
+                    label.col-md-2.control-label Week Ending
+                    .col-md-3
+                        input(ng-model="fitness.weekEnding" required)
+                .row
+                    label.col-md-2.control-label exerciseOnDay
+                    .col-md-3
+                        input(ng-model="fitness.exerciseOnDay" required)
+                .row
+                    label.col-md-2.control-label Description
+                    .col-md-3
+                        input(ng-model="fitness.description")
+                .row
+                    label.col-md-2.control-label Person
+                    .col-md-3
+                        input(ng-model="fitness.person.id")
+                .form-group
+                    col-md-10.col-md-offset-2
+                        .pull-right
+                            button.btn.btn-primary(ng-click="update()",  ng-disabled="createForm.$invalid") Update
+                            | &nbsp;
+                            button.btn.btn-primary(ng-click="delete()") Delete
+                            | &nbsp;
+                            a.btn.btn-default(href="/") Home                        

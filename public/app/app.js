@@ -72,6 +72,10 @@
                 templateUrl: '/partials/fitness/fitness',
                 controller: 'fitnessCtrl'
             })
+            .when('/fitnessDetail/:id', {
+                templateUrl: '/partials/fitness/fitnessDetail',
+                controller: 'fitnessDetailCtrl'
+            })
             .when('/fitnessAdd', {
                 templateUrl: '/partials/fitness/fitnessAdd',
                 controller: 'fitnessAddCtrl'

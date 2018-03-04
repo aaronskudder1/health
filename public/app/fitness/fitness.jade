@@ -7,20 +7,55 @@
               .panel-heading.text-center Fitness
               .panel-body
                 .well
-                    a.btn.btn-primary(href="/fitnessAdd") Add Fitness
-                    .col-md-12
-                        div &nbsp;              
-                .well
                    table.table.table-hover.table-striped.table-condensed
                     thead
                       tr
-                        th Patient
-                        th Exercise
-                        th Description
-                        th Date
+                        th week
+                        th week Ending
+                        th Sunday
+                        th Monday
+                        th Tuesday
+                        th Wednesday
+                        th Thursday
+                        th Friday
+                        th Saturday
+                        th Total
                     tbody
-                      tr(ng-repeat="fitnes in fitness | orderBy: 'date'")
-                        td {{fitnes.person.name}}
-                        td {{fitnes.exercise}}
-                        td {{fitnes.description}}
-                        td {{fitnes.date | date}}
+                      tr(ng-repeat="fit in fitness | orderBy: 'week'")
+                         td
+                            {{fit.week}}
+                         td
+                            {{fit.weekEnding}}
+                         td
+                            {{fit.exerciseOnDay[0]}}
+                         td
+                            {{fit.exerciseOnDay[1]}}
+                         td
+                            {{fit.exerciseOnDay[2]}}
+                         td
+                            {{fit.exerciseOnDay[3]}}
+                         td
+                            {{fit.exerciseOnDay[4]}}
+                         td
+                            {{fit.exerciseOnDay[5]}}
+                         td
+                            {{fit.exerciseOnDay[6]}}
+                         td
+                            {{fit.exerciseOnDay[0]+fit.exerciseOnDay[1]+fit.exerciseOnDay[2]+fit.exerciseOnDay[3]+fit.exerciseOnDay[4]+fit.exerciseOnDay[5]+fit.exerciseOnDay[6]}}
+                .well
+                    h2 year {{fitness[0].year}}
+                .well(ng-repeat="fit in fitness | orderBy: 'week' ")
+                        b Week {{fit.week}} &nbsp; Weekending {{fit.weekEnding}}
+                        ul
+                            li
+                                span.padDay Monday &nbsp;
+                                    p-{{fit.exerciseOnDay[0]}}
+                                span.padDay Tuesday &nbsp;
+                                    p-{{fit.exerciseOnDay[1]}}
+                                span.padDay Wednesday &nbsp;
+                                    p-{{fit.exerciseOnDay[2]}}
+                        p total {{fit.exerciseOnDay[0] + fit.exerciseOnDay[1]+ fit.exerciseOnDay[2]+ fit.exerciseOnDay[3]+ fit.exerciseOnDay[4]+ fit.exerciseOnDay[5]+ fit.exerciseOnDay[6]}}
+                            
+                        
+                            
+                         

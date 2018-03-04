@@ -15,6 +15,7 @@
             },
             weight: Number,
             waist: Number,
+            chest: Number,
             person: {
                 type: ObjectId,
                 ref: 'Persons'
@@ -82,8 +83,16 @@
                     dia: 75,
                     sys: 123,
                     pulse: 77,
-                    weight: 46.7,
+                    weight: 46,
                     date: '2018-02-10',
+                    person: '59ed027eeb16171314fd00ca'
+                });
+                Metrics.create({
+                    dia: 96,
+                    sys: 148,
+                    pulse: 96,
+                    weight: 46,
+                    date: '2018-02-25',
                     person: '59ed027eeb16171314fd00ca'
                 });
                 //Aaron
@@ -126,14 +135,6 @@
                     person: '59ea44bd6864283f0023cf1e'
                 });
                 Metrics.create({
-                    dia: 63,
-                    sys: 138,
-                    pulse: 75,
-                    weight: 79.1,
-                    date: '2018-01-15',
-                    person: '59ea44bd6864283f0023cf1e'
-                });
-                Metrics.create({
                     dia: 65,
                     sys: 114,
                     pulse: 67,
@@ -142,7 +143,7 @@
                     date: '2018-02-03',
                     person: '59ea44bd6864283f0023cf1e'
                 });
-                Metrics.create({
+                Metrics.create({ 
                     dia: 78,
                     sys: 115,
                     pulse: 98,
@@ -151,11 +152,22 @@
                     date: '2018-02-24',
                     person: '59ea44bd6864283f0023cf1e'
                 });
+                Metrics.create({
+                    dia: 76,
+                    sys: 117,
+                    pulse: 62,
+                    weight: 77.9,
+                    waist: 1030,
+                    chest: 1050,
+                    date: '2018-03-03',
+                    person: '59ea44bd6864283f0023cf1e'
+                });
                 //Maia
                 Metrics.create({
                     dia: 62,
                     sys: 109,
                     pulse: 78,
+                    weight: 51.2,
                     date: '2017-10-08',
                     person: '59ea44bd6864283f0023cf20'
                 });
@@ -191,6 +203,17 @@
                     dia: 60,
                     sys: 120,
                     pulse: 80,
+                    waist: 670,
+                    weight: 51.2,
+                    date: '2018-02-03',
+                    person: '59ea44bd6864283f0023cf20'
+                });
+                Metrics.create({
+                    dia: 64,
+                    sys: 119,
+                    pulse: 70,
+                    waist: 670,
+                    weight: 51.2,
                     date: '2018-02-03',
                     person: '59ea44bd6864283f0023cf20'
                 });

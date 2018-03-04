@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     /*global angular*/
-    angular.module('app').controller('fitnessCtrl', function ($scope, fitness, $routeParams) {
+    angular.module('app').controller('fitnessCtrl', function ($scope, fitness, fitnessResource, $routeParams) {
 
 //        fitness.query().$promise.then(function (collection) {
 //            collection.forEach(function (fitness) {
@@ -21,5 +21,6 @@
             text: "Sort by exercise"
         }];
         $scope.sortOrder = $scope.sortOptions[0].value;
+        //$scope.monday 
     });
 }());
