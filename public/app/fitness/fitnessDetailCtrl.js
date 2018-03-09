@@ -1,8 +1,7 @@
 (function () {
     'use strict';
     /*global angular, moment*/
-    angular.module('app').controller('fitnessDetailCtrl', function ($scope, fitnessResource, fitness, $location, $routeParams, notifier) {
-    
+    angular.module('app').controller('fitnessDetailCtrl', function ($scope, fitnessResource, persons, fitness, $location, $routeParams, notifier) {
 //        $scope.fitness = function () {
 //            fitnessResource.getFitness()
 //        }
@@ -15,6 +14,8 @@
 //            var id = $routeParams.id,
  //              fitness = fitnessResource.getfitnessById(id);
         });
+        $scope.persons = persons.query();
+
 
         $scope.editMode = false;
         $scope.edit = function () {
@@ -22,20 +23,22 @@
         };
         $scope.update = function () {
             $scope.editMode = false;
-            var newfitnessData = {
+            var newFitnessData = {
                 year: $scope.fitness.year,
-                gender: $scope.fitness.week,
-                height: $scope.fitness.weekEnding,
-                exerciseOnDay: $scope.fitness.exerciseOnDay,
-                person: $scope.person
+                person: '59ea44bd6864283f0023cf1e',
+                week: $scope.fitness.week,
+                weekEnding: $scope.fitness.weekEnding,
+                exerciseOnDay: $scope.fitness.exerciseOnDay
             };
+            console.log(newFitnessData);
 
-            fitnessResource.updatefitness(newfitnessData).then(function () {
-                notifier.notify('Patient has been updated');
-            }, function (reason) {
-                notifier.error(reason);
-            });
-        };
+            fitnessResource.fitnessUpdate(newFitnessData)
+             .then(function () {
+                 notifier.notify('Patient has been updated');
+             }, function (reason) {
+                 notifier.error(reason);
+             });
+         };
 
         $scope.delete = function () {
             var deleteData = {

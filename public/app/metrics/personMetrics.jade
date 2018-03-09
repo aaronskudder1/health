@@ -22,6 +22,7 @@
             th Pulse
             th weight
             th waist
+            th chest
         tbody
           tr(ng-repeat="metric in metrics | filter: person.name | orderBy: sortOrder ")
             td
@@ -31,3 +32,4 @@
             td {{metric.pulse}}
             td {{metric.weight}}
             td {{metric.waist}}
+            th {{metric.chest}}

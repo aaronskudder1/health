@@ -23,7 +23,7 @@
                     tbody
                       tr(ng-repeat="fit in fitness | orderBy: 'week'")
                          td
-                            {{fit.week}}
+                            a(href="/fitnessDetail/{{fit._id}}") {{fit.week}}
                          td
                             {{fit.weekEnding}}
                          td

@@ -7,9 +7,9 @@
         mainCtrl = require('../controllers/mainCtrl'),
         personCtrl = require('../controllers/personCtrl'),
         metricsCtrl = require('../controllers/metricsCtrl'),
-        fitnessCtrl = require('../controllers/fitnessCtrl'),
-        mongoose = require('mongoose'),  //?
-        User = mongoose.model('User'); //?
+        fitnessCtrl = require('../controllers/fitnessCtrl');
+//        mongoose = require('mongoose'),  //?
+//        User = mongoose.model('User'); //?
 
     module.exports = function (app) {
         app.get('/api/users', userCtrl.getUsers);
@@ -35,6 +35,7 @@
         app.get('/api/fitness', fitnessCtrl.getFitness);
         app.get('/api/fitness/:id', fitnessCtrl.getFitnessById);
         app.post('/api/fitness', fitnessCtrl.createFitness);
+        app.post('/api/fitnessUpdate/:id', fitnessCtrl.fitnessUpdate);
         
         app.get('/partials/*', function (req, res) {
             res.render('../../public/app/' + req.params[0]);

@@ -4,7 +4,6 @@
     var mongoose = require('mongoose'),
         MetricsModel = require('../models/MetricsModel'),
         UserModel = require('../models/UserModel'),
-        StaffModel = require('../models/StaffModel'),
         FitnessModel = require('../models/FitnessModel'),
         PersonModel = require('../models/PersonModel');
 
@@ -19,7 +18,6 @@
         MetricsModel.createDefaultMetrics();
         PersonModel.createDefaultPersons();
         UserModel.createDefaultUsers();
-        StaffModel.createDefaultStaff();
         FitnessModel.createDefaultFitness();
     };
 }());

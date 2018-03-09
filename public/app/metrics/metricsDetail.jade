@@ -2,25 +2,26 @@
     .well 
         h4 {{metrics.person.name}}
             .row
-                .col-md-2
+                .col-md-1
                     img(src='/images/{{metrics.person.photo }}')
                 .col-md-3
                     p Date: {{metrics.date | date }}                
                     p DOB: {{metrics.person.DOB | date }}
                     p AGE: {{age}}
                     p Gender: {{metrics.person.gender}}
-                .col-md-3
+                .col-md-4
                     p Systolic: {{metrics.sys }}
                     p Diasolic: {{metrics.dia }}
                     p Height: {{metrics.person.height}} (M)
                     p Pulse: {{metrics.pulse }}
                     p Highest Pulse: {{maxPulse}}
                     
-                .col-md-3
-                    p Initial Weight: {{metrics.person.initialWeight}} Current: {{metrics.weight}} kg
+                .col-md-4
+                    p Initial Weight: {{metrics.person.initialWeight}}, Current: {{metrics.weight}} kg
                     P Weight Loss: {{metrics.person.initialWeight - metrics.weight  | number : 2}} kg
                     p BMI: {{bmi}}
                     p Waist: {{metrics.waist}}
+                    p Chest: {{metrics.chest}}
     .well        
         .row
             .col-md-4

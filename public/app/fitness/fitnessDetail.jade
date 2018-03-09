@@ -28,7 +28,7 @@
         form.form-horizontal(name="personEdit")
             fieldset
                 legend
-                    p Edit {{person.name}}
+                    p Edit {{fitness.person.name}}
                     p &nbsp
                 .row
                     label.col-md-2.control-label Week
@@ -40,8 +40,21 @@
                         input(ng-model="fitness.weekEnding" required)
                 .row
                     label.col-md-2.control-label exerciseOnDay
-                    .col-md-3
-                        input(ng-model="fitness.exerciseOnDay" required)
+                    .col-md-8
+                        p Sunday
+                            input(ng-model="fitness.exerciseOnDay[0]" type="number")
+                        p Monday
+                            input(ng-model="fitness.exerciseOnDay[1]" type="number")
+                        p Tuesday
+                            input(ng-model="fitness.exerciseOnDay[2]" type="number")
+                        p Wenesday
+                            input(ng-model="fitness.exerciseOnDay[3]" type="number")
+                        p Thursday
+                            input(ng-model="fitness.exerciseOnDay[4]" type="number")
+                        p Friday
+                            input(ng-model="fitness.exerciseOnDay[5]" type="number")
+                        p Saturday
+                            input(ng-model="fitness.exerciseOnDay[6]" type="number")
                 .row
                     label.col-md-2.control-label Description
                     .col-md-3
@@ -49,7 +62,7 @@
                 .row
                     label.col-md-2.control-label Person
                     .col-md-3
-                        input(ng-model="fitness.person.id")
+                        //select#propertyType.select.form-control(type="text", ng-model="person.selectedOption", ng-options="person._id as person.name for person in persons" required) 
                 .form-group
                     col-md-10.col-md-offset-2
                         .pull-right

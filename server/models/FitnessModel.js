@@ -83,14 +83,14 @@
                     year: 2018,
                     week: 9,
                     weekEnding: "3rd Mar",
-                    exerciseOnDay: [4.5,4,4,1.5,1.5,3,1],
+                    exerciseOnDay: [4.5,4,4,1.5,1.5,2,2],
                     person: '59ea44bd6864283f0023cf1e'
                 });
                 Fitness.create({
                     year: 2018,
                     week: 10,
                     weekEnding: "10th Mar",
-                    exerciseOnDay: [0,0,0,0,0,0,0],
+                    exerciseOnDay: [3,1.5,0,0,0,0,0],
                     person: '59ea44bd6864283f0023cf1e'
                 });
                 Fitness.create({

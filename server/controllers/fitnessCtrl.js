@@ -23,8 +23,10 @@
     };
     exports.createFitness = function (req, res) {
         var entry = ({
+            year: req.body.year,
+            week: req.body.week,
             date: req.body.date,
-            exercise: req.body.exercise,
+            exerciseOnDay: req.body.exercise,
             description: req.body.description,
             person: req.body.person,
         });
@@ -44,6 +46,20 @@
             }
         });
     };
-
-
+    exports.fitnessUpdate = function (req, res, next) {
+        var entry = ({
+            year: req.body.year,
+            week: req.body.week,
+            weekEnding: req.body.weekEnding,
+            person: req.body.person,
+            exerciseOnDay: req.body.exerciseOnDay
+        });
+        console.log(entry);
+        Fitness.findByIdAndUpdate(req.params.id, entry, {}, function (err) {
+            if (err) {
+                return next(err);
+            }
+            res.redirect('/');
+        });
+    };
 }());
