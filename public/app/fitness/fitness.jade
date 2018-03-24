@@ -42,20 +42,6 @@
                             {{fit.exerciseOnDay[6]}}
                          td
                             {{fit.exerciseOnDay[0]+fit.exerciseOnDay[1]+fit.exerciseOnDay[2]+fit.exerciseOnDay[3]+fit.exerciseOnDay[4]+fit.exerciseOnDay[5]+fit.exerciseOnDay[6]}}
-                .well
-                    h2 year {{fitness[0].year}}
-                .well(ng-repeat="fit in fitness | orderBy: 'week' ")
-                        b Week {{fit.week}} &nbsp; Weekending {{fit.weekEnding}}
-                        ul
-                            li
-                                span.padDay Monday &nbsp;
-                                    p-{{fit.exerciseOnDay[0]}}
-                                span.padDay Tuesday &nbsp;
-                                    p-{{fit.exerciseOnDay[1]}}
-                                span.padDay Wednesday &nbsp;
-                                    p-{{fit.exerciseOnDay[2]}}
-                        p total {{fit.exerciseOnDay[0] + fit.exerciseOnDay[1]+ fit.exerciseOnDay[2]+ fit.exerciseOnDay[3]+ fit.exerciseOnDay[4]+ fit.exerciseOnDay[5]+ fit.exerciseOnDay[6]}}
-                            
                         
                             
                          

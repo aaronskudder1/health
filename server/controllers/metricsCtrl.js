@@ -28,6 +28,7 @@
             pulse : req.body.pulse,
             weight : req.body.weight,
             waist : req.body.waist,
+            chest : req.body.chest,
             person : req.body.person,
             date : req.body.date
         });
